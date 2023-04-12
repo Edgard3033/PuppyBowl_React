@@ -7,10 +7,11 @@ import SinglePlayer from "./components/SinglePlayer";
 function App() {
   return (
     <div>
-      <NavBar />
-      <AllPlayers />
+      <h1>Puppy Bowl</h1>
+      {/* <NavBar /> */}
       <Routes>
-        <Route path="/players/:id" element={<SinglePlayer />} />
+        <Route path="/" element={<AllPlayers />} />
+        <Route path="/:id" element={<SinglePlayer />} />
       </Routes>
     </div>
   );
