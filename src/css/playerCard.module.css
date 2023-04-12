@@ -1,11 +1,8 @@
 .container {
-  background-color: red;
   display: flex;
   flex-direction: column;
-  flex-wrap: wrap;
   justify-content: space-evenly;
-  padding-bottom: 10px;
-  padding-top: 10px;
+  padding: 10px 10px 10px 10px;
 }
 
 .name {
@@ -15,5 +12,5 @@
 }
 
 .pupPic {
-  height: 50rem;
+  height: 40rem;
 }
