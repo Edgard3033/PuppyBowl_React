@@ -1,7 +1,9 @@
 import React from "react";
+import { useNavigate } from "react-router-dom";
 import styles from "../css/playerCard.module.css";
 
 export default function PlayerCard({ player }) {
+  const navigate = useNavigate();
   return (
     <div key={player.id} className={styles.container}>
       <h2 className={styles.name}>
@@ -13,7 +15,9 @@ export default function PlayerCard({ player }) {
         src={player.imageUrl}
         alt="picture of player"
       />
-      <button>See Details</button>
+      <button className="btn" onClick={() => navigate(`${player.id}`)}>
+        See Details
+      </button>
     </div>
   );
 }

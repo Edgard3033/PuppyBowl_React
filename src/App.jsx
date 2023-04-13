@@ -6,7 +6,7 @@ import SinglePlayer from "./components/SinglePlayer";
 
 function App() {
   return (
-    <div>
+    <div className="container">
       <h1>Puppy Bowl</h1>
       {/* <NavBar /> */}
       <Routes>

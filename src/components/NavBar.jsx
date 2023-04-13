@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { addNewPlayer } from "../AjaxHelpers/puppies";
 import { fetchAllPlayers } from "../AjaxHelpers/puppies";
+import styles from "../css/NavBar.module.css";
 
 export default function NavBar({ setPlayers }) {
   const [name, setName] = useState("");
@@ -8,6 +9,7 @@ export default function NavBar({ setPlayers }) {
 
   return (
     <form
+      className={styles.form}
       onSubmit={async (e) => {
         e.preventDefault();
         const newDog = await addNewPlayer({ name, breed });
@@ -16,11 +18,13 @@ export default function NavBar({ setPlayers }) {
         console.log(newDog);
       }}
     >
-      <label>Name:</label>
+      <label className={styles.label}>Name:</label>
       <input type="text" onChange={(e) => setName(e.target.value)}></input>
-      <label>Breed:</label>
+      <label className={styles.label}>Breed:</label>
       <input type="text" onChange={(e) => setBreed(e.target.value)}></input>
-      <button type="submit">Submit</button>
+      <button className={styles.btn} type="submit">
+        Submit
+      </button>
     </form>
   );
 }

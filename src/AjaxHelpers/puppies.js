@@ -1,5 +1,5 @@
 // Add your cohort name to the cohortName variable below, replacing the 'COHORT-NAME' placeholder
-const cohortName = "2301-FTB-ET-WEB-AM";
+const cohortName = "2301-FTB-ET-WEB-AM-EDGARD";
 // Use the APIURL variable for fetch requests
 const APIURL = `https://fsa-puppy-bowl.herokuapp.com/api/${cohortName}/`;
 
@@ -53,7 +53,7 @@ export const addNewPlayer = async (playerObj) => {
 
 export const removePlayer = async (playerId) => {
   try {
-    const response = await fetch(`${APIURL}/players/${playerId}`, {
+    const response = await fetch(`${APIURL}players/${playerId}`, {
       method: "DELETE",
     });
     const result = await response.json();
